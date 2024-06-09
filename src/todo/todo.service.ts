@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { Todo, Prisma } from '@prisma/client';
+import { CreateTodoDto } from './dto/create-todo.dto';
 
 interface BatchPayload {
   count: number;
@@ -8,6 +9,7 @@ interface BatchPayload {
 
 @Injectable()
 export class TodoService {
+
   constructor(private prisma: PrismaService) {}
 
   async create(data: Prisma.TodoCreateInput): Promise<Todo> {

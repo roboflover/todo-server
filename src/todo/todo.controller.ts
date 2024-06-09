@@ -35,9 +35,4 @@ export class TodoController {
     return this.todoService.remove(+id);
   }
 
-  // @Delete('delete-by-title')
-  // deleteByTitle(@Body('title') title: string): Promise<BatchPayload> {
-  //   return this.todoService.removeByTitle(title);
-  // }
-
 }
